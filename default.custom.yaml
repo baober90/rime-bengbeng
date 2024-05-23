@@ -12,9 +12,9 @@ patch:
     - schema: wubi86_jidian             # 五笔
     - schema: numbers                   # 大写数字
     - schema: wubi86_jidian_pinyin      # 五笔拼音混输
-    - schema: wubi86_jidian_trad        # 五笔 - 简入繁出
-    - schema: wubi86_jidian_trad_pinyin # 五笔拼音混输 - 简入繁出
-    - schema: pinyin_simp               # 普通拼音
+#    - schema: wubi86_jidian_trad        # 五笔 - 简入繁出
+#    - schema: wubi86_jidian_trad_pinyin # 五笔拼音混输 - 简入繁出
+#    - schema: pinyin_simp               # 普通拼音
 
   # Menu
   menu:
@@ -24,7 +24,7 @@ patch:
       - "Control+0"
       - "Shift+Control+0"
     abbreviate_options: true
-    caption: "【 输入法设置 】"
+    caption: "【 方案切换 】"
     option_list_separator: "｜"
 
   #-----------------------------------------------
@@ -39,7 +39,7 @@ patch:
   ascii_composer:
     good_old_caps_lock: true       # true: 在保持 cap 键原有的特征， false: 点击不会切换大小写
     switch_key:
-      Caps_Lock: commit_code        # 如果想用 cap 键切换中英文输入，就修改为上面三种的任一一种，否则用 noop
+      Caps_Lock: inline_ascii        # 如果想用 cap 键切换中英文输入，就修改为上面三种的任一一种，否则用 noop
       Shift_L: commit_code          # macOs 上 shift 键不区别左右，设置参数同上
       Shift_R: commit_code
       Control_L: noop
@@ -119,37 +119,37 @@ patch:
       "}": ["』", "〗", "｝"]
       "~": "～"
     half_shape: # 半角符号
-      "!": {commit: "！"}
-      "\"": {pair: ["“", "”"]}
+      "!": {commit: "!"}
+#      "\"": {pair: ["\"", "\""]}
       "#": "#"
-      "$": "￥"
-      "%": ["%", "％", "°", "℃"]
+      "$": "$"
+      "%": "%"
       "&": "&"
-      "'": {pair: ["‘", "’"]}
+#      "'": {pair: ["'", "'"]}
       "(": "（"
       ")": "）"
       "*": "*"
       "+": "+"
-      ",": {commit: "，"}
+      ",": {commit: ","}
       "-": {commit: "-"}
-      .: {commit: "。"}
+      .: {commit: "."}
       "/": "/"
-      ":": {commit: "："}
-      ";": {commit: "；"}
-      "<": {commit: "《"}
+      ":": {commit: ":"}
+      ";": {commit: ";"}
+      "<": {commit: "<"}
       "=": {commit: "="}
-      ">": {commit: "》"}
-      "?": {commit: "？"}
+      ">": {commit: ">"}
+      "?": {commit: "?"}
       "@": "@"
-      "[": {commit: "【"}
+      "[": {commit: "["}
       "\\": {commit: "、"}
-      "]": {commit: "】"}
-      "^": {commit: "……"}
-      _: "——"
+      "]": {commit: "]"}
+      "^": {commit: "^"}
+      _: "_"
       "`": "`"
-      "{": "「"
+      "{": "{"
       "|": "|"
-      "}": "」"
+      "}": "}"
       "~": "~"
   recognizer:
     patterns:  # 一些常见的英文组合，当正则匹配到这些时，都不会生成候选词，而只输入英文

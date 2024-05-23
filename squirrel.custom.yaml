@@ -61,8 +61,39 @@ patch:
 
 # --- 特定程序定义初始状态的英文输入 ---
   app_options:
-    com.termius-dmg.mac: # Terminal - Mac
+    com.googlecode.iterm2: # item2
+      #      ascii_punct: true 英文标点
       ascii_mode: true
+      vim_mode: true
+    com.jetbrains.intellij:
+      #      ascii_punct: true
+      ascii_mode: true
+      vim_mode: true
+    com.jetbrains.cwm.guest:
+      #      ascii_punct: true
+      ascii_mode: true
+      vim_mode: true
+    com.jetbrains.datagrip:
+      #      ascii_punct: true
+      ascii_mode: true
+      vim_mode: true
+    com.jetbrains.rustrover-EAP:
+      #      ascii_punct: true
+      ascii_mode: true
+      vim_mode: true
+    com.jetbrains.Fleet.app:
+      #      ascii_punct: true
+      ascii_mode: true
+      vim_mode: true
+    com.microsoft.VSCode:
+      ascii_mode: true
+      vim_mode: true
+    org.vim.MacVim:
+      ascii_mode: true
+      vim_mode: true
+    dev.zed.Zed:
+      ascii_mode: true
+      vim_mode: true
 #    com.google.Chrome: # Chrome
 #      ascii_mode: true
 #    com.coderforart.MWeb3: # MWeb
