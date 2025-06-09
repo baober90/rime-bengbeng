@@ -57,6 +57,10 @@ patch:
       # 上下翻页 [ ]
       - { when: has_menu, accept: bracketleft, send: Page_Up }
       - { when: has_menu, accept: bracketright, send: Page_Down }
+      # 上下翻页  , .
+      - { when: has_menu, accept: period, send: Page_Up }
+      - { when: has_menu, accept: comma, send: Page_Down }
+
 
       # 上下翻页 - =
 #      - { when: has_menu, accept: minus, send: Page_Up }
