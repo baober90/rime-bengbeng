@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: lansanguanfang
+  schema_id: lansan
   name: "蓝三"
   version: "1.0"
   icon: "wubi86_jidian.ico"           # string 方案图标，格式： .ico
@@ -22,7 +22,7 @@ switches:
 #    reset: 0    # 初始状态为 0: 简 -> 简 1: 简 -> 繁
 #    states: [ 简体, 繁体 ]
   - name: full_shape
-    reset: 1
+    reset: 0
     states: [ 全角, 半角 ]
   - name: extended_charset
     states: [ 常用, 扩展 ]
@@ -67,7 +67,7 @@ speller:
 #  auto_clear: max_length                # 空码时自动清空
 
 translator:
-  dictionary: lansanguanfang # 翻译器将调取此字典文件
+  dictionary: lansan # 翻译器将调取此字典文件
   enable_charset_filter: false           # 开启字符集过滤
   enable_completion: false               # 是否显示编码未输入完整的词条
 
