@@ -15,7 +15,7 @@
 patch:
   style:
     color_scheme: wechat_light_lansan            # 白亮模式下启用的皮肤，名字对应下方对皮肤的字义名
-    color_scheme_dark: so_young_qmod_01  # 暗黑模式下启用的皮肤
+    color_scheme_dark: wechat_light_lansan  # 暗黑模式下启用的皮肤
   preset_color_schemes:
     roseo_maple:
       name: 玫枫 / Roseo Maple

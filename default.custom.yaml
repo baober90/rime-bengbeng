@@ -13,6 +13,7 @@ patch:
     - schema: lansanfull            # 宝石蓝第三代(大字集)
     - schema: wubi86_jidian             # 五笔
     - schema: numbers                   # 大写数字
+    - schema: lansan_pinyin                   # 蓝三拼音混输
 #    - schema: wubi86_jidian_pinyin      # 五笔拼音混输
 #    - schema: wubi86_jidian_trad        # 五笔 - 简入繁出
 #    - schema: wubi86_jidian_trad_pinyin # 五笔拼音混输 - 简入繁出
