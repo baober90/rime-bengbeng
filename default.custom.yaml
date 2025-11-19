@@ -10,7 +10,8 @@ patch:
   # 菜单中可选的方案列表，可根据喜好自行调整顺序，第一位为默认方案
   schema_list:
     - schema: lansan            # 蓝宝石第三代(标准字集)
-    - schema: lansanfull            # 蓝宝石第三代(大字集)
+    - schema: lansanbig            # 蓝宝石第三代(大字集)
+    - schema: lansanguanfang            # 蓝宝石第三代(官方 无词频)
     - schema: wubi86_jidian             # 五笔
     - schema: numbers                   # 大写数字
     - schema: lansan_pinyin                   # 蓝三拼音混输
