@@ -1,0 +1,102 @@
+# Rime schema settings
+# encoding: utf-8
+#
+
+schema:
+  schema_id: bright3
+  name: 奕·三定
+  version: "1.0"
+  author:
+    - 单单 <xci@live.com>
+  description: |
+    音托小码，三码定长
+    QQ交流群: 790835977
+  dependencies:
+    - pinyin_simp
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [中, 英]
+  - name: full_shape
+    reset: 0
+    states: [半, 全]
+  - name: zh_s2t
+    reset: 0
+    states: [简, 繁]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - affix_segmentor@pinyin_lookup
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - script_translator@pinyin_lookup
+  #    - reverse_lookup_translator
+  filters:
+    - uniquifier
+    - simplifier@zh_s2t
+    - reverse_lookup_filter@pinyin_reverse_lookup
+
+speller:
+  alphabet: "abcdefghjiklmnopqrstuvwxyz"
+  initials: "abcdefghijklmnopqrstuvwxyz"
+  max_code_length: 3
+  auto_select: true
+  auto_clear: manual
+  auto_select_pattern: "^[a-z]{3}$"
+
+translator:
+  dictionary: bright3
+  enable_sentence: false
+  enable_user_dict: false
+  enable_completion: true
+  enable_encoder: false
+
+pinyin_lookup:
+  tag: pinyin_lookup
+  dictionary: pinyin_simp
+  prefix: "`"
+  tips: "〔拼音〕"
+
+# 反查
+pinyin_reverse_lookup:
+  tags: [pinyin_lookup]
+  overwrite_comment: true
+  dictionary: bright3 #反查所得
+  comment_format:
+    - "xform/^/〔/"
+    - "xform/$/〕/"
+    - "xform/ /, /"
+
+zh_s2t:
+  opencc_config: s2t.json
+  option_name: zh_s2t
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  #  import_preset: default
+  bindings:
+    - { when: has_menu, accept: semicolon, send: 2 }
+    - { when: has_menu, accept: apostrophe, send: 3 }
+
+recognizer:
+  patterns:
+    pinyin_lookup: "^`([a-z]'?)*$"
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
