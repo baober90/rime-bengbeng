@@ -9,6 +9,7 @@
 patch:
   # 菜单中可选的方案列表，可根据喜好自行调整顺序，第一位为默认方案
   schema_list:
+    - schema: lansan_6763 # 蓝三-雾小隐
     #- schema: lansan            # 蓝宝石第三代(标准字集)
     #- schema: lansanbig            # 蓝宝石第三代(大字集)
     - schema: lansanguanfang            # 蓝三-大字集-官方-纯单字
@@ -20,7 +21,6 @@ patch:
 #    - schema: wubi86_jidian_trad_pinyin # 五笔拼音混输 - 简入繁出
     - schema: pinyin_simp               # 普通拼音
     - schema: bright3 # 奕码三定
-    - schema: lansan_6763 # 蓝三-雾小隐
 
   # Menu
   menu:
